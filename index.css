@@ -1,28 +1,50 @@
-/*      MADE BY:
-        Theodora Tataru
-        Lily O'Sullivan
-        tataru.theodora@yahoo.com */
 
 *  {
   font-family: 'Nunito Sans', sans-serif; 
   /* 	Custom Font, See below
       https://fonts.google.com/specimen/Nunito+Sans?selection.family=Nunito+Sans
   */ 
+    box-sizing: border-box;
 }
 
-header {
+.videoContainer {
+  width: 100%;
+  height: auto;
   overflow: hidden;
-  padding-left:150px;
-  padding-right:150px;
-  padding-top:7px;
-  padding-bottom:7px;
-  background-color: rgba(0, 0, 0, 1);
-  position:fixed;
-  z-index: 99;
+  z-index:0;
+  display:block;
   top:0;
-  width:100%;"
-  /*padding: 20px 10px;*/
+}
 
+#videoOverlay {
+  background-color: #333333; /*black  #333333 */
+  position:absolute;
+  top:0%;
+  left:0%;
+  color: white;
+  opacity: 0.85;
+  z-index:1;
+  height:26%; /*this needs to change it's height as the video */
+  width:100%;
+}
+
+.videoContainer video{ 
+  /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+  width: 100%;
+  height: auto;
+  /* Center the video */
+  filter: grayscale(40%);
+}
+
+#textBox {
+  width: auto;
+  height: auto;
+  display:block;
+  background-color:grey;
+  overflow:hidden;
+}
+
+#innerContent {
 }
 
 #logo {
@@ -35,283 +57,181 @@ header {
   color:rgb(210, 210, 210);
   text-align:center;
 }
-
 #cristina {
-  width: 45%; 
+  width: 90%; 
   height: auto;
-  margin:0 auto;
-  display:block;
+  margin: 0 auto;
+  padding: 10%;
+  display: block;
+  /* padding: 10% 0 20% 0; */
 }
-
-header a{
-  color: white;
-  padding-left: 12px;
-  padding-right: 12px;
-  text-decoration: none;
-}
-
-#header-menu { /* Controls Menu (Black Bar on top) Links*/
-  display: inline-block;
-  position: relative;
-  width: 49%;
-  font-size:1.6em;
-  vertical-align: super;
-  text-align: center;
-}
-
-.caption {
+#caption {
   position: absolute;
-  left: 0;
-  top: 50%;
+  top: 7%;
+  left: 0%;
   width: 100%;
   text-align: center;
   color: #000;
+  z-index: 2;
 }
-
-.caption span.border {
+#caption span.border {
   /*background-color: rgba(205, 44, 151,0.5);*/
   background: linear-gradient(to right,  rgba(142,0,142,0.3) 0%,rgba(204,0,78,0.4) 50%,rgba(142,0,142,0.30) 100%); /* Creates Small Gradient Effect */
   box-shadow: 0px -2px -2px rgba(34,34,34,0.6);
-  border-radius: 50px;
+  border-radius: 3vw;
   color: #fff;
-  padding: 8px; /* Sets Border Size, 18 might be too big */
-  font-size: 25px;
-  letter-spacing: 7px;
+  padding: 1vw; /* Sets Border Size, 18 might be too big */
+  font-size: 3.2vw;
+  letter-spacing: 0.2vw;
 }
-
-.titleheader {
-  left: 0;
-  top: 10%;
-  width: 100%;
-  text-align: center;
-  color: #000;
-}
-
-.titleheader span.spantitle {
-  /*background-color: rgba(205, 44, 151,0.5);*/
-  background: linear-gradient(to right,  rgba(142,0,142,0.3) 0%,rgba(204,0,78,0.4) 50%,rgba(142,0,142,0.30) 100%); /* Creates Small Gradient Effect */
-  box-shadow: 0px -2px -2px rgba(34,34,34,0.6);
-  border-radius: 50px;
-  color: #fff;
-  padding: 8px; /* Sets Border Size, 18 might be too big */
-  font-size: 25px;
-  letter-spacing: 7px;
-}
-
-.background{
+.background {
   background-image: url("dark_wood.png");
 }
-
 body {
   height: 100%;
   margin: 0;
 }
-
 .logo {
   border-radius: 999px;
   margin: auto;
 }
-  
 .contact {
   color: black; 
-  text-decoration:none;
+  text-decoration: none;
   padding:7px;
 }
-
 .icons {
   color: black; 
-  text-decoration:none;
+  text-decoration: none;
   padding:1px;
 }
-  
-.bigBox {
-  background-color: #333333; /*black*/
-  text-align: center;
-  color: white;
-  opacity: 0.85;
-  padding: 1px;
-}
-  
+
 .box {
   background-color:#d9d9d9; /*grey*/
   width:auto;
   height:auto;
   padding: 5px;
   position: relative;
-  bottom: 1%;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 0%;
   text-align: center;
   color: black;
-  opacity: 0.9;
+  -webkit-box-shadow: -12px 10px 68px -2px rgba(0,0,0,0.75);
+  -moz-box-shadow: -12px 10px 68px -2px rgba(0,0,0,0.75);
+  box-shadow: -12px 10px 68px -2px rgba(0,0,0,0.75);
 }
-
-  
 .whoAmI {
-  margin: 765px 300px auto 300px;
   height:auto;
-  padding: 10px;
+  padding: 1% 5%;
   text-align: left;
-  text-indent: 50px;
+  text-indent: 5vw;
   color: #DCDCDC;
   text-shadow: 1px 1px 50px black;
+  font-size: 1.3vw;
 }
 
-/* Style the video: 100% width and height to cover the entire window DESKTOP */
-.fullscreen-bg {
-  position: fixed;
-  
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow: hidden;
-  z-index: -100;
+#reviewsVideo {
+  position: relative;
+  left: 35%;
 }
 
-@media (max-aspect-ratio: 16/9) {
-  .fullscreen-bg__video {
-  width: 300%;
-  left: -100%;
-  }
-}
-/* Mobile Version */
+/* end LARGE DEVICES */
+
+/*==========================================================================*/
 @media only screen and (max-width: 360px) {
-  /* NO VIDEO AS BACKGROUND */
-  body {
-    background: url('dark_wood.png') center center / cover no-repeat;
-  }
-  .fullscreen-bg__video {
-    display: none;
-  }
+}
+ /* Extra small devices (phones, 600px and down) */
+ /*=================================================================*/
+@media only screen and (min-width: 361px) and (max-width: 599px) {
+}/*=================================================================*/
 
-  .header a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/*=================================================================*/
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+}/*=================================================================*/
 
-  .header-right {
-    float: None;
-  }
-  /*end background*/
-    .caption {
-    position: absolute;
-    left: 0;
-    top: 10%;
-    width: 100%;
-    text-align: center;
-    color: #000;
-  }
+/* Medium devices (landscape tablets, 768px and up) */
+/*=================================================================*/
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+}/*=================================================================*/
 
-  .caption span.border {
-    /*background-color: rgba(205, 44, 151,0.5);*/
-    background: linear-gradient(to right,  rgba(142,0,142,0.3) 0%,rgba(204,0,78,0.4) 50%,rgba(142,0,142,0.30) 100%); /* Creates Small Gradient Effect */
-    box-shadow: 0px -2px -2px rgba(34,34,34,0.6);
-    border-radius: 50px;
-    color: #fff;
-    padding: 8px; /* Sets Border Size, 18 might be too big */
-    font-size: 8px;
-    letter-spacing: 1px;
-  }
-/* quote */
-div#reviews {
-  width: 500px;
-  box-shadow: 0 0 10px 7px #FF1493;
-  margin: auto;
+/* Large devices (laptops/desktops, 992px and up) */
+/*=================================================================*/
+@media only screen and (min-width: 993px) and (max-width: : 1199px) {
+   /* Large devices (laptops/desktops, px and up) */
+}/*=================================================================*/
+
+@media only screen and (min-width: 1200px) {
+}/*=================================================================*/
+
+@media only screen and (min-width: 1900px) {
+}/*=================================================================*/
+
+@media only screen and (min-width: 2500px) {
+}/*=================================================================*/
+
+/* GALLERY */
+* {box-sizing: border-box;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 50vw;
+  margin: 0 auto;
 }
 
-div#reviewsVideo {
-  width: 560px;
-  box-shadow: 0 0 10px 7px #FF1493;
-  margin: auto;
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
 }
 
-iframe {
-  padding: 1px;
-}
-/* quote */
-/* menu */
-header {
-  overflow: hidden;
-  padding-left:1px;
-  padding-right:1px;
-  padding-top:1px;
-  padding-bottom:1px;
-  background-color: rgba(0, 0, 0, 1);
-  position:fixed;
-  z-index: 99;
-  top:0;
-  width:100%;"
-  /*padding: 20px 10px;*/
-}
-
-#logo {
-  letter-spacing:0px;
-  font-family: 'Parisienne', cursive;
-  font-size: 0px;
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
   display: inline-block;
-  width: 10%;
-  padding:1px;
-  color:rgb(210, 210, 210);
-  text-align:center;
+  transition: background-color 0.6s ease;
 }
 
-header a{
-  color: white;
-  padding-left: 1px;
-  padding-right: 1px;
-  text-decoration: none;
+.active {
+  background-color: #717171;
 }
 
-#header-menu { /* Controls Menu (Black Bar on top) Links*/
-  display: inline-block;
-  position: relative;
-  width: 49%;
-  font-size:10px;
-  vertical-align: super;
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+
+/*Neon Text */
+.NEONpinktxt {
   text-align: center;
+  font-size: 2vw;
+  color: #fff;
+  text-shadow: 0 0 10px #000000, 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #000000, 0 0 70px #000000, 0 0 80px #000000, 0 0 100px #000000, 0 0 150px #000000;
 }
-
-#cristina {
-  width: 50%; 
-  height: auto;
-  margin: 70px auto auto auto;
-  display:block;
-}
-
-.whoAmI {
-  margin: 30px;
-  height:auto;
-  padding: 1px;
-  text-align: left;
-  text-indent: 2px;
-  color: #DCDCDC;
-  text-shadow: 1px 1px 10px black;
-  position: relative;
-  font-size: 10px;
-}
-
-.bigBox {
-  background-color: #333333; /*black*/
-  text-align: center;
-  color: white;
-  opacity: 0.85;
-  padding: 1px;
-}
-.box {
-  background-color:#d9d9d9; /*grey*/
-  width:auto;
-  height:auto;
-  padding: 1px;
-  position: relative;
-  bottom: 1%;
-  left: %;
-  transform: translateX(-50%);
-  text-align: center;
-  color: black;
-  opacity: 0.9;
-  font-size: 10px;
-}
-}
-/* end mobile version*/

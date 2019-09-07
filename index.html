@@ -1,72 +1,146 @@
-<!--    MADE BY:
-        Theodora Tataru
-        Lily O'Sullivan
-        tataru.theodora@yahoo.com -->
+<!--    
+    MADE BY:
+    Theodora Tataru
+    Lily O'Sullivan
+    tataru.theodora@yahoo.com 
+-->
+
+
+<!--
+    Im a message:
+      * I added the slide show, changing the photos every 4 seconds. I wanted a nice frame
+        I was trying to make it shiny, like a glass, I couldn't find somting so I added a shadow.
+      * I made the phone number to work when you tap it, so I left just the clickable PNGs.
+      * That's it.. I felt I did so much, but no, that's it.
+      * Please make it look pretty <3, you have that gift.
+-->
+
+
 
 <html>
-<!-- The video background-->
-<div class="fullscreen-bg" style="position:absolute;left:0;top:0;height:100%;width:100%;overflow:hidden;">
-    <video loop muted autoplay poster="dark_wood.png" style="min-width: 100%;min-height: 100%;filter: grayscale(40%);"class="fullscreen-bg__video">
-          <source src="BackGround.mp4" type="video/mp4">
-        </video>
-</div>
-<!-- End Video -->
-<!-- The transparent box that will include all the text -->
-
 <head>
     <title>Cristina Colciar</title> 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Parisienne&display=swap" rel="stylesheet">  
     <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
-    <div class="bigBox">
-        <header>
-        <!-- MENU -->
-        <a id="logo">Cristina Colciar</a> <!-- This will get its own nice font -->
-            <div id="header-menu">
-                <a href="index.html">Home</a>
-                <a href="reviews.html">Facebook</a>
-                <a href="insta.html">Instagram</a>
-                <a href="video.html">Youtube</a>
-                <a href="about">About</a>
-            </div>
-        
-    </header>
-    <!-- END MENU -->
-        <div class="caption">
-            <span class="border">Viata se masoara in momentele care iti taie respiratia!</span>
-        </div>
+    <div id="caption">
+        <span class="border">Viata se masoara in momentele care iti taie respiratia!</span>
+        <img id="cristina" src="logo.png" alt="Logo"/>   
+    </div>
 
 
 
-        <div class="whoAmI">
-            <img id="cristina" src="logo.png" alt="Logo" />
+    <div class="videoContainer">
+        <div id="videoOverlay"></div>
+        <video loop muted autoplay poster="dark_wood.png" class="fullscreen-bg__video">
+            <source src="BackGround.mp4" type="video/mp4">
+        </video>
+    </div>
 
-            <p>Cine sunt? </p>
+
+    <div id="textBox">
+        <div id="innerContent">
+          <div class="whoAmI">
+            <p style="font-weight: bold">Cine sunt?</p>
             <p>In cateva cuvinte ma pot defini ca o persoana initiatoare, foarte activa, cu spirit de observatie, atenta la detalii, empatica, mereu cu zambetul pe buze, imi place sa scot in evidenta frumosul din jurul meu, sa privesc mereu “partea plina a paharului” , sunt o fire competitiva si spontana, deci imi plac provocarile si situatiile in care trebuie sa imi depasesc limitele. <br> De mica mi-a placut sa organizez petreceri, iesiri in aer liber si surprize pentru prieteni si familie. Am fost mereu cea care adunam “gasca” pentru o iesire spontana, reprezentam “grupul” in orice situatie si gandeam totul pana in cel mai mic detaliu. Nimic nu s-a schimbat nici in ziua de azi, doar ca acum am mai multa experienta, iar cercul meu de prieteni s-a marit! :) <br> Anii au trecut si imprejurarile mi-au oferit oportunitatea de a face o meserie din calitatile native, asa am ajuns Event Planner. </p>
-            <p>Ce fac eu si cu ce ma ocup?</p>
-            Povestea statutului meu de Event Planner incepe acum cativa ani, odata cu momentul in care am facut cunostinta cu -lumea evenimentelor- , observand ca pe piata existau furnizori de servicii (foto-video, staroste, dj, aranjamente florale, etc), dar pentru o buna armonie lipsea cineva care sa preia “haturile”, sa poarte grija unei reusite, practic o persoana care sa organizeze, sa adune, sa initieze, asa cum o faceam eu de mica in plan personal, dar transpusa in plan profesional. Nu mi-a trebuit mult timp sa actionez! <br> La vremea aceea nu existau multe informatii despre Event Planning, conceptul fiind adus la noi in tara de peste ocean. Clientii au avut nevoie sa faca cunostinta cu notiunea de Event Planner, prestatorii de servicii sa inteleaga rolul unui Event Planner, iar piata evenimentelor sa accepte nevoia unei persoane care sa insumeze serviciile si sa ofere solutii prompte adaptate nevoilor fiecarui client in parte. Pe zi ce trece, meseria de Event Planner este tot mai cunoscuta si mai cautata pentru ca ofera liniste si siguranta clientilor, toate preocuparile privind organizarea si coordonarea evenimentului, programarile pentru tinute, desfasurarea evenimentului si multe altele sunt in grija mea! Pe parcursul timpului, <b>Cristina Colciar - Event Planner</b> a devenit o echipa frumoasa, profesionista, care ofera servicii complete si integrate, de la conceptul si tematica evenimentului, pana la realizarea acestuia cu tot ce implica: decoratiuni, consultanta si design floral, entertainment (dj, mc, formatii de muzica usoara/populara, clown, momente artistice), servicii foto-video, candy bar, cocktail bar, etc.
-            <br> Va invit sa ne cunoastem si sa realizam impreuna evenimentul vostru asa cum vi-l doriti!
+            <p style="font-weight: bold">Ce fac eu si cu ce ma ocup?</p>
+            <p>Povestea statutului meu de Event Planner incepe acum cativa ani, odata cu momentul in care am facut cunostinta cu -lumea evenimentelor- , observand ca pe piata existau furnizori de servicii (foto-video, staroste, dj, aranjamente florale, etc), dar pentru o buna armonie lipsea cineva care sa preia “haturile”, sa poarte grija unei reusite, practic o persoana care sa organizeze, sa adune, sa initieze, asa cum o faceam eu de mica in plan personal, dar transpusa in plan profesional. Nu mi-a trebuit mult timp sa actionez! <br> La vremea aceea nu existau multe informatii despre Event Planning, conceptul fiind adus la noi in tara de peste ocean. Clientii au avut nevoie sa faca cunostinta cu notiunea de Event Planner, prestatorii de servicii sa inteleaga rolul unui Event Planner, iar piata evenimentelor sa accepte nevoia unei persoane care sa insumeze serviciile si sa ofere solutii prompte adaptate nevoilor fiecarui client in parte. Pe zi ce trece, meseria de Event Planner este tot mai cunoscuta si mai cautata pentru ca ofera liniste si siguranta clientilor, toate preocuparile privind organizarea si coordonarea evenimentului, programarile pentru tinute, desfasurarea evenimentului si multe altele sunt in grija mea! Pe parcursul timpului, <b>Cristina Colciar - Event Planner</b> a devenit o echipa frumoasa, profesionista, care ofera servicii complete si integrate, de la conceptul si tematica evenimentului, pana la realizarea acestuia cu tot ce implica: decoratiuni, consultanta si design floral, entertainment (dj, mc, formatii de muzica usoara/populara, clown, momente artistice), servicii foto-video, candy bar, cocktail bar, etc. 
+            <br>Va invit sa ne cunoastem si sa realizam impreuna evenimentul vostru asa cum vi-l doriti!
             <br> Cu apreciere, Cristina Colciar - Event Planner</p>
         </div>
+
+
+            <!-- Gallery-->
+
+        <div id="background-slides" style="background-color:black;height:100%;width:100%;position:relative;overflow:hidden;">
+
+            <div id="background-image" style="background-size: cover;filter:blur(55px) saturate(1.2);z-index: 1;height:100%;width:100%;z-index:3;transform:scale(1.2);opacity: 0.5;"></div> 
+
+            <div class="slideshow-container" style="z-index:4;position: relative;top: -87%;width: 50%;">
+
+                <div class="mySlides fade">
+                  <img src="Gallery\1.jpg" style="width:100%;border-radius: 0.2%;box-shadow: -12px 10px 68px -2px rgba(0,0,0,0.75);">
+                </div>
+
+                <div class="mySlides fade">
+                  <img src="Gallery\2.jpg" style="width:100%;border-radius: 0.2%;box-shadow: -12px 10px 68px -2px rgba(0,0,0,0.75);">
+                </div>
+
+                <div class="mySlides fade">
+                  <img src="Gallery\3.jpg" style="width:100%;border-radius: 0.2%;box-shadow: -12px 10px 68px -2px rgba(0,0,0,0.75);">
+                </div>
+
+                <div class="mySlides fade">
+                  <img src="Gallery\4.jpg" style="width:100%;border-radius: 0.5%;box-shadow: -12px 10px 68px -2px rgba(0,0,0,0.75);">
+                </div>
+
+                <div class="mySlides fade">
+                  <img src="Gallery\5.jpg" style="width:100%;border-radius: 1%;box-shadow: -12px 10px 68px -2px rgba(0,0,0,0.75);">
+                </div>
+
+                <div class="mySlides fade">
+                  <img src="Gallery\6.jpg" style="width:100%;border-radius: 1%;box-shadow: -12px 10px 68px -2px rgba(0,0,0,0.75);">
+                </div>
+            </div>
+            <br>
+
+            <div style="text-align:center;display:none;">
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+              <span class="dot"></span>
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+              <span class="dot"></span>  
+            </div>
+
+          </div>
+
+
+            <script>
+            var slideIndex = 0;
+            showSlides();
+
+            function showSlides() 
+            {
+              var i;
+              var slides = document.getElementsByClassName("mySlides"); // Array
+              var dots = document.getElementsByClassName("dot"); // Another Array ?
+              for (i = 0; i < slides.length; i++) { // All Images invisible at the start
+                slides[i].style.display = "none";  
+              }
+              slideIndex++;
+              if (slideIndex > slides.length) // Rest to first image
+              {
+                slideIndex = 1
+              }    
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              document.getElementById("background-image").style.backgroundImage  = 'url(Gallery/' + slideIndex + '.jpg)'; 
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+              setTimeout(showSlides, 4000); // Change image every 4 seconds // Recursive calls ?
+            }
+            </script>
+            <!-- End Gallery -->
+
     </div>
+</div>
+    <footer class="box">
+        <p class="NEONpinktxt">Contact</p>
+        <p><a class="contact" href="mailto:C00227188@itcarlow.ie"><img class="icons" src="Contact\mail.png" style="width: 4vw"></a>
+        <a class="contact" href="tel:+40 740 645 820"><img class="icons" src="Contact\phone.png"  style="width: 4vw"></a>
+        <a class="contact" href="https://www.facebook.com/gliga.mariacristina "><img class="icons" src="Contact\facebook.png"  style="width: 4vw"></a>
+        <a class="contact" href="https://www.instagram.com/cristina.colciar/"><img class="icons" src="Contact\instagram.png"  style="width: 4vw"></a>
+    </footer>
+
+
 </body>
-
-<footer>
-    <div class="box">
-        <p>
-            <a class="contact" href="mailto:C00227188@itcarlow.ie"><img class="icons" src="Contact\mail.png" width="20px"></a> cristina.colciar.event.planner@gmail.com
-        </p>
-
-        <p>
-            <a class="contact" href="+40 740 645 820"><img class="icons" src="Contact\phone.png" width="20px"></a> +40 740 645 820 </p>
-
-        <a class="contact" href="https://www.facebook.com/gliga.mariacristina "><img class="icons" src="Contact\facebook.png" width="20px"></a>
-        <a class="contact" href="https://www.instagram.com/cristina.colciar/"><img class="icons" src="Contact\instagram.png" width="20px"></a>
-    </div>
-</footer>
-<!-- End Of Transparent Box -->
 </html>
+
+
+
